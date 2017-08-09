@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
 using System.Web.Mvc;
 using Vidly.Models;
 
@@ -9,11 +10,26 @@ namespace Vidly.Controllers
 {
     public class CustomersController : Controller
     {
+        //DBContext to access the database
+        private ApplicationDbContext _context;
+
+        public CustomersController()
+        {
+            //Initialization of DBContext
+            _context = new ApplicationDbContext();
+        }
+
+        //DBContext is a Disposable object. Need to override the Dispose method from the base controller class
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         // GET: Customers
         [Route("Customers/Index")]
         public ActionResult Index()
         {
-            var customers = GetCustomers();
+            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
             return View(customers);
         }
 
@@ -21,7 +37,8 @@ namespace Vidly.Controllers
         [Route("Customers/Details/{id}")]
         public ActionResult Details(int id)
         {
-            foreach (Customer cust in GetCustomers())
+            //Iterate through the list of Customers returned from the Customers table from the database
+            foreach (Customer cust in _context.Customers.ToList())
             {
                 if (cust.Id == id)
                 {
@@ -30,15 +47,6 @@ namespace Vidly.Controllers
             }
             return HttpNotFound();
         }
-
-        private IEnumerable<Customer> GetCustomers()
-        {
-            //Create and return a list of customers
-            return new List<Customer>
-            {
-                new Customer { Id = 1, Name = "John Smith"},
-                new Customer { Id = 2, Name = "Mary Williams"}
-            };
-        }
+        
     }
 }
