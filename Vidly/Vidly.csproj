@@ -216,9 +216,74 @@
     <Compile Include="Migrations\201708090242176_ApplyAnnotationToCustomerName.Designer.cs">
       <DependentUpon>201708090242176_ApplyAnnotationToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708111658387_AddedMembershipTypeName.cs" />
+    <Compile Include="Migrations\201708111658387_AddedMembershipTypeName.Designer.cs">
+      <DependentUpon>201708111658387_AddedMembershipTypeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708111701406_PopulateMembershipTypeNames.cs" />
+    <Compile Include="Migrations\201708111701406_PopulateMembershipTypeNames.Designer.cs">
+      <DependentUpon>201708111701406_PopulateMembershipTypeNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708111733550_AddedBirthdateToCustomer.cs" />
+    <Compile Include="Migrations\201708111733550_AddedBirthdateToCustomer.Designer.cs">
+      <DependentUpon>201708111733550_AddedBirthdateToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708111742338_MakeBrithdayNullable.cs" />
+    <Compile Include="Migrations\201708111742338_MakeBrithdayNullable.Designer.cs">
+      <DependentUpon>201708111742338_MakeBrithdayNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708111744096_EraseAllBirthdays.cs" />
+    <Compile Include="Migrations\201708111744096_EraseAllBirthdays.Designer.cs">
+      <DependentUpon>201708111744096_EraseAllBirthdays.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708111750046_EditBirthdays.cs" />
+    <Compile Include="Migrations\201708111750046_EditBirthdays.Designer.cs">
+      <DependentUpon>201708111750046_EditBirthdays.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708111822422_AddGenreTable.cs" />
+    <Compile Include="Migrations\201708111822422_AddGenreTable.Designer.cs">
+      <DependentUpon>201708111822422_AddGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708111825392_AddGenreEntityToDatabase.cs" />
+    <Compile Include="Migrations\201708111825392_AddGenreEntityToDatabase.Designer.cs">
+      <DependentUpon>201708111825392_AddGenreEntityToDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708111829190_AddGenreToMovieClass.cs" />
+    <Compile Include="Migrations\201708111829190_AddGenreToMovieClass.Designer.cs">
+      <DependentUpon>201708111829190_AddGenreToMovieClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708111830566_AddMoviesDbSetToDatabase.cs" />
+    <Compile Include="Migrations\201708111830566_AddMoviesDbSetToDatabase.Designer.cs">
+      <DependentUpon>201708111830566_AddMoviesDbSetToDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708111832213_PopulateGenresEntity.cs" />
+    <Compile Include="Migrations\201708111832213_PopulateGenresEntity.Designer.cs">
+      <DependentUpon>201708111832213_PopulateGenresEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708111835486_UpdateGenresEntity.cs" />
+    <Compile Include="Migrations\201708111835486_UpdateGenresEntity.Designer.cs">
+      <DependentUpon>201708111835486_UpdateGenresEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708111838183_UpdateMoviesEntity.cs" />
+    <Compile Include="Migrations\201708111838183_UpdateMoviesEntity.Designer.cs">
+      <DependentUpon>201708111838183_UpdateMoviesEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708111908247_RemoveGenreDbSet.cs" />
+    <Compile Include="Migrations\201708111908247_RemoveGenreDbSet.Designer.cs">
+      <DependentUpon>201708111908247_RemoveGenreDbSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708112142181_PopulateGenresEntity1.cs" />
+    <Compile Include="Migrations\201708112142181_PopulateGenresEntity1.Designer.cs">
+      <DependentUpon>201708112142181_PopulateGenresEntity1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708112144427_AddDataToGenresEntity.cs" />
+    <Compile Include="Migrations\201708112144427_AddDataToGenresEntity.Designer.cs">
+      <DependentUpon>201708112144427_AddDataToGenresEntity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -290,6 +355,7 @@
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -324,6 +390,54 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708090242176_ApplyAnnotationToCustomerName.resx">
       <DependentUpon>201708090242176_ApplyAnnotationToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708111658387_AddedMembershipTypeName.resx">
+      <DependentUpon>201708111658387_AddedMembershipTypeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708111701406_PopulateMembershipTypeNames.resx">
+      <DependentUpon>201708111701406_PopulateMembershipTypeNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708111733550_AddedBirthdateToCustomer.resx">
+      <DependentUpon>201708111733550_AddedBirthdateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708111742338_MakeBrithdayNullable.resx">
+      <DependentUpon>201708111742338_MakeBrithdayNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708111744096_EraseAllBirthdays.resx">
+      <DependentUpon>201708111744096_EraseAllBirthdays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708111750046_EditBirthdays.resx">
+      <DependentUpon>201708111750046_EditBirthdays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708111822422_AddGenreTable.resx">
+      <DependentUpon>201708111822422_AddGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708111825392_AddGenreEntityToDatabase.resx">
+      <DependentUpon>201708111825392_AddGenreEntityToDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708111829190_AddGenreToMovieClass.resx">
+      <DependentUpon>201708111829190_AddGenreToMovieClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708111830566_AddMoviesDbSetToDatabase.resx">
+      <DependentUpon>201708111830566_AddMoviesDbSetToDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708111832213_PopulateGenresEntity.resx">
+      <DependentUpon>201708111832213_PopulateGenresEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708111835486_UpdateGenresEntity.resx">
+      <DependentUpon>201708111835486_UpdateGenresEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708111838183_UpdateMoviesEntity.resx">
+      <DependentUpon>201708111838183_UpdateMoviesEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708111908247_RemoveGenreDbSet.resx">
+      <DependentUpon>201708111908247_RemoveGenreDbSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708112142181_PopulateGenresEntity1.resx">
+      <DependentUpon>201708112142181_PopulateGenresEntity1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708112144427_AddDataToGenresEntity.resx">
+      <DependentUpon>201708112144427_AddDataToGenresEntity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

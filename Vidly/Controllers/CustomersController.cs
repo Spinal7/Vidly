@@ -38,7 +38,7 @@ namespace Vidly.Controllers
         public ActionResult Details(int id)
         {
             //Iterate through the list of Customers returned from the Customers table from the database
-            foreach (Customer cust in _context.Customers.ToList())
+            foreach (Customer cust in _context.Customers.Include(c => c.MembershipType).ToList())
             {
                 if (cust.Id == id)
                 {
