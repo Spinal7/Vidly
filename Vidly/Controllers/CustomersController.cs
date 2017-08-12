@@ -49,6 +49,7 @@ namespace Vidly.Controllers
             return HttpNotFound();
         }
 
+        
         public ActionResult New()
         {
             //Get a list of the types of membership from the database
