@@ -27,6 +27,9 @@ namespace Vidly.Models
         //Add a movie entity to the database
         public DbSet<Movie> Movies { get; set; }
 
+        //Database Set for the membership types
+        public DbSet<MembershipType> MembershipTypes { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
